@@ -1,0 +1,212 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:id="@+id/title_relative"
+        android:background="#000000">
+
+        <ImageView
+            android:src="@drawable/pkq01"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:id="@+id/title_city_manager" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="天气预报"
+            android:layout_toRightOf="@id/title_city_manager"
+            android:textColor="#ffffff"
+            android:textSize="25sp"
+            android:gravity="center_vertical"
+            android:id="@+id/title_city_name" />
+
+        <ImageView
+            android:id="@+id/title_city_share"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/pkq"
+            android:layout_alignParentRight="true"/>
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_toLeftOf="@id/title_city_share"
+            android:src="@drawable/saber1"
+            android:id="@+id/title_city_update"
+            />
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_toLeftOf="@id/title_city_update"
+            android:src="@drawable/pkq02"
+            android:id="@+id/title_city_locate"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/today_relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_relative"
+        android:background="@drawable/shenzhen"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/todayinfo1_relative"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:id="@+id/todayinfo1_linear1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/todayinfo1_cityName"
+                    android:text="北京"
+                    android:textColor="#ffffff"
+                    android:textSize="47sp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/todayinfo1_updateTime"
+                    android:text="发布时间 18:25"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/todayinfo1_humidity"
+                    android:text="湿度:57%"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/todayinfo1_linear2"
+                android:orientation="vertical"
+                android:layout_toLeftOf="@+id/todayinfo1_linear3"
+                >
+
+                <ImageView
+                    android:id="@+id/todayinfo1_pm25img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/biz_plugin_weather_0_50"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/todayinfo1_linear3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentRight="true"
+                >
+
+                <TextView
+                    android:id="@+id/todayinfo1_pm25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="220"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    />
+                <TextView
+                    android:id="@+id/todayinfo1_pm25status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="重度污染"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/todayinfo2_relative"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@id/todayinfo1_relative"
+            >
+
+            <LinearLayout
+                android:id="@+id/todayinfo2_linear1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+            <ImageView
+                android:id="@+id/weatherStatusImg"
+                android:layout_width="155dp"
+                android:layout_height="128dp"
+                android:src="@drawable/biz_plugin_weather_qing"
+                />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/todayinfo2_linear2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_toRightOf="@id/todayinfo2_linear1"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="今天  星期三"
+                    android:textColor="#ffffff"
+                    android:textSize="27sp"
+                    android:id="@+id/todayinfo2_week" />
+                <TextView
+                    android:id="@+id/todayonfo_temperature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="2摄氏度 -- 7摄氏度"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    />
+                <TextView
+                    android:id="@+id/todayinfo2_weatherState"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="晴"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    />
+                <TextView
+                    android:id="@+id/todayinfo2_wind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="微风"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
